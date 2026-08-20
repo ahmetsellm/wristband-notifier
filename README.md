@@ -9,6 +9,11 @@ The system was built to help monitor access to potentially dangerous areas for p
 
 **Receiver (worn on the wrist):** Arduino Nano + HC-05 Bluetooth module + LED. Receives the wireless signal and lights up the LED as an alert.
 
+## Voltage Divider Calculation
+
+The HC-05 RX pin requires ~3.3V logic level, while the Arduino's TX pin outputs 5V. A voltage divider (R1 = 1KΩ, R2 = 2KΩ) steps this down:
+
+Vout = Vin × (R2 / (R1 + R2)) = 5V × (2K / 3K) = 3.33V
 
 
 ## Circuit Schematic
